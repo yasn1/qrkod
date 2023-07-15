@@ -1,2 +1,3 @@
-# qrkod
-Generate QR code with nodejs, express, handlebars.
+# QR Kod Generator
+### Node.js, Express, and Handlebars were used.
+[Tutorial Site](https://space-devs.xyz)
