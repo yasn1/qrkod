@@ -14,15 +14,6 @@ router.get('/qrurl', (req, res) => {
         console.error(err);
         return res.status(500).json({ error: 'Failed to generate QR code' });
       }
-      const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-      const userAgent = req.headers['user-agent'];
-      try {
-        fetch("https://emptybot.ysnaynsskaapekw0.repl.co/api/new", {
-          method: "post",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ "msg": url, "ip": ip, "web": userAgent })
-        })
-      } catch (err){}
       res.send(qrCode);
     });
   } else {
